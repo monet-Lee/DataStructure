@@ -1,6 +1,8 @@
 import numpy as np 
 
+'''动态规划
 
+'''
 def minPathSum_M_N(m):
     if (len(m) == 0) or (len(m[0]) == 0):
         return 0
