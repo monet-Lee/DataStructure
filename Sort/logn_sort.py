@@ -1,6 +1,12 @@
 import random 
 from arrays import Array
+'''
+快速排序：
+1、递归的将1个数列分成两个区域，小于区和大于区，直到每个分区只有1个元素
 
+归并排序：
+
+'''
 
 def swap(lyst, i, j):
     temp = lyst[i]
@@ -8,10 +14,7 @@ def swap(lyst, i, j):
     lyst[j] = temp
 
 
-class QuickSort(object):
-
-    def __init__(self):
-        pass
+class QuickSort():
 
     def quicksort(self, lyst):
         self.quicksortHelper(lyst, 0, len(lyst)-1)
@@ -37,7 +40,7 @@ class QuickSort(object):
         return boundry
 
 
-class MergeSort(object):  
+class MergeSort():  
 
     def __init__(self):
         pass
