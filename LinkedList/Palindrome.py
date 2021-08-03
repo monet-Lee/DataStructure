@@ -35,6 +35,15 @@ class SLinkedList:
         while(temp is not None):
             print(temp.dataval)
             temp=temp.nextval
+    
+    # 基于数组生成链表
+    def GetListfromArray(self, arr):
+        head = Node(arr[0])
+        cur = head
+        for i in range(1,len(arr)):
+            cur.nextval=Node(arr[i])
+            cur=cur.nextval
+        return head
 
 class Solution():
     def PalindromeDetecte(self, list1):
@@ -58,17 +67,9 @@ class Solution():
 
 
 if __name__ == "__main__":
-    n1 = Node("1")
-    n2 = Node("2")
-    n3 = Node("3")
-    n5 = Node("2")
-    n6 = Node("1")
-    n1.nextval = n2
-    n2.nextval = n3
-    n3.nextval = n5
-    n5.nextval = n6
+    arr_init = [9,0,4,3,3,3,5,1]
     list1 = SLinkedList()
-
+    n1 = list1.GetListfromArray(arr_init)
     list1.headval = n1
     s = Solution()
     print(s.PalindromeDetecte(list1))
